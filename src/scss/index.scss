@@ -1,0 +1,36 @@
+.container_Style {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+ul {
+  margin: 40px;
+  border-style: groove;
+  padding: 30px;
+}
+.doneTodoStyle {
+  color: gray;
+  text-decoration: line-through;
+}
+
+li {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
+  list-style: inside;
+}
+
+h2 {
+  font-size: 25px;
+  color: firebrick;
+  margin-top: 80px;
+}
