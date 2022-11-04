@@ -6,16 +6,14 @@ toDos.push(new Todos("Karva Pumpor", false));
 toDos.push(new Todos("Byta Sängkläder", false));
 toDos.push(new Todos("Dammsuga", true));
 
-function printTodoList() {
-  const mainTodoUl = document.getElementById("todoUl");
-  mainTodoUl.innerHTML = "";
+const mainTodoUl = document.getElementById("todoUl");
+const clickedTodoUl = document.getElementById("clickedTodoUl");
 
-  const clickedTodoUl = document.getElementById("clickedTodoUl");
+function render() {
+  mainTodoUl.innerHTML = "";
   clickedTodoUl.innerHTML = "";
 
   for (let i = 0; i < toDos.length; i++) {
-    console.log(toDos[i]);
-
     if (toDos[i].completed) {
       addToCompletedUl(toDos[i], clickedTodoUl);
     } else {
@@ -23,16 +21,15 @@ function printTodoList() {
     }
   }
 }
+
 function addToCompletedUl(todos, clickedTodoUl) {
   let newTodoLi = document.createElement("li");
-
   newTodoLi.classList.add("beenClickedOn");
   clickedTodoUl.appendChild(newTodoLi);
   newTodoLi.innerHTML = todos.what;
   newTodoLi.addEventListener("click", () => {
     todos.completed = false;
-    todos.toggleComplete();
-    printTodoList();
+    render();
   });
 }
 
@@ -42,8 +39,8 @@ function stayAttodoUl(todos, mainTodoUl) {
   newTodoLi.innerHTML = todos.what;
   newTodoLi.addEventListener("click", () => {
     todos.completed = true;
-    printTodoList();
+    render();
   });
 }
 
-printTodoList();
+render();
