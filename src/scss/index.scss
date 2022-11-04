@@ -2,7 +2,7 @@
   width: 80%;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 input,
@@ -16,7 +16,7 @@ ul {
   border-style: groove;
   padding: 30px;
 }
-.doneTodoStyle {
+.beenClickedOn {
   color: gray;
   text-decoration: line-through;
 }
