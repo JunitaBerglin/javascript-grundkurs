@@ -2,13 +2,7 @@
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: center;
-}
-
-input,
-button {
-  padding: 10px;
-  margin: 10px;
+  flex-wrap: wrap;
 }
 
 ul {
